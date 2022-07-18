@@ -11,7 +11,7 @@
 		9CDBA0972885EF8000001A7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0962885EF8000001A7E /* ContentView.swift */; };
 		9CDBA0992885EF8000001A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDBA0982885EF8000001A7E /* Assets.xcassets */; };
 		9CDBA09C2885EF8000001A7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDBA09B2885EF8000001A7E /* Preview Assets.xcassets */; };
-		9CDBA0A62885F03400001A7E /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0A52885F03400001A7E /* File.swift */; };
+		9CDBA0A62885F03400001A7E /* WorkoutProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		9CDBA0962885EF8000001A7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9CDBA0982885EF8000001A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CDBA09B2885EF8000001A7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9CDBA0A52885F03400001A7E /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutProgram.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +73,7 @@
 		9CDBA0A42885F02500001A7E /* model */ = {
 			isa = PBXGroup;
 			children = (
-				9CDBA0A52885F03400001A7E /* File.swift */,
+				9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CDBA0972885EF8000001A7E /* ContentView.swift in Sources */,
-				9CDBA0A62885F03400001A7E /* File.swift in Sources */,
+				9CDBA0A62885F03400001A7E /* WorkoutProgram.swift in Sources */,
 				9CDBA0952885EF8000001A7E /* fitnessAppTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
