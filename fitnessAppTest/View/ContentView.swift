@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         NavigationView {
             VStack {
@@ -25,14 +24,19 @@ struct ContentView: View {
             )
             
             .navigationBarTitle("Workout Plan")
-            
+            }
         }
     }
     
     // MARK: - Views
     var fullbodyCardAndWeather: some View {
         HStack {
-            fullbodyCard
+            NavigationLink {
+                DetailView(id: "4")
+            } label: {
+                fullbodyCard
+            }
+
             Spacer()
             weatherLabel
         }
@@ -80,12 +84,16 @@ struct ContentView: View {
             ScrollView(.horizontal, showsIndicators: true) {
                 HStack {
                     ForEach(WorkoutProgram.programs) { program in
-                        makeWorkoutCard(
-                            imageName: program.imageName,
-                            day: program.day,
-                            workoutName: program.workoutName
-                        )
-                        .padding()
+                        NavigationLink {
+                            DetailView(id: program.apiId)
+                        } label: {
+                            makeWorkoutCard(
+                                imageName: program.imageName,
+                                day: program.day,
+                                workoutName: program.workoutName
+                            )
+                            .padding()
+                        }
                     }
                 }
             }
@@ -117,7 +125,7 @@ struct ContentView: View {
         .cornerRadius(20)
         .shadow(radius: 10)
     }
-}
+
 
 
 struct ContentView_Previews: PreviewProvider {

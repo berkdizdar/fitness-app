@@ -7,20 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C5254E228987FDD007BC90B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5254E128987FDD007BC90B /* DetailView.swift */; };
 		9CDBA0952885EF8000001A7E /* fitnessAppTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0942885EF8000001A7E /* fitnessAppTestApp.swift */; };
 		9CDBA0972885EF8000001A7E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0962885EF8000001A7E /* ContentView.swift */; };
 		9CDBA0992885EF8000001A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDBA0982885EF8000001A7E /* Assets.xcassets */; };
 		9CDBA09C2885EF8000001A7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CDBA09B2885EF8000001A7E /* Preview Assets.xcassets */; };
 		9CDBA0A62885F03400001A7E /* WorkoutProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */; };
+		9CE23894289FE202006447AC /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE23893289FE202006447AC /* NetworkService.swift */; };
+		9CE23899289FEA6C006447AC /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE23898289FEA6C006447AC /* NetworkConstants.swift */; };
+		9CE2389C289FECC1006447AC /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2389B289FECC1006447AC /* DetailViewModel.swift */; };
+		9CE2389E289FEDC7006447AC /* WorkoutDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE2389D289FEDC7006447AC /* WorkoutDetail.swift */; };
+		9CE238A1289FF9E1006447AC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9CE238A0289FF9E1006447AC /* Kingfisher */; };
+		9CE238A3289FFD67006447AC /* WorkoutImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE238A2289FFD67006447AC /* WorkoutImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C5254E128987FDD007BC90B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		9CDBA0912885EF8000001A7E /* fitnessAppTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fitnessAppTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CDBA0942885EF8000001A7E /* fitnessAppTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fitnessAppTestApp.swift; sourceTree = "<group>"; };
 		9CDBA0962885EF8000001A7E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9CDBA0982885EF8000001A7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9CDBA09B2885EF8000001A7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutProgram.swift; sourceTree = "<group>"; };
+		9CE23893289FE202006447AC /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9CE23898289FEA6C006447AC /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		9CE2389B289FECC1006447AC /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		9CE2389D289FEDC7006447AC /* WorkoutDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetail.swift; sourceTree = "<group>"; };
+		9CE238A2289FFD67006447AC /* WorkoutImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,12 +41,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE238A1289FF9E1006447AC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C5254E028987FBA007BC90B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CDBA0962885EF8000001A7E /* ContentView.swift */,
+				9C5254E128987FDD007BC90B /* DetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9CDBA0882885EF8000001A7E = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +76,11 @@
 		9CDBA0932885EF8000001A7E /* fitnessAppTest */ = {
 			isa = PBXGroup;
 			children = (
-				9CDBA0A42885F02500001A7E /* model */,
+				9CE2389A289FEC96006447AC /* ViewModel */,
+				9CE23892289FE1F5006447AC /* Network */,
+				9C5254E028987FBA007BC90B /* View */,
+				9CDBA0A42885F02500001A7E /* Model */,
 				9CDBA0942885EF8000001A7E /* fitnessAppTestApp.swift */,
-				9CDBA0962885EF8000001A7E /* ContentView.swift */,
 				9CDBA0982885EF8000001A7E /* Assets.xcassets */,
 				9CDBA09A2885EF8000001A7E /* Preview Content */,
 			);
@@ -70,12 +95,31 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9CDBA0A42885F02500001A7E /* model */ = {
+		9CDBA0A42885F02500001A7E /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9CDBA0A52885F03400001A7E /* WorkoutProgram.swift */,
+				9CE2389D289FEDC7006447AC /* WorkoutDetail.swift */,
+				9CE238A2289FFD67006447AC /* WorkoutImage.swift */,
 			);
-			path = model;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9CE23892289FE1F5006447AC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9CE23893289FE202006447AC /* NetworkService.swift */,
+				9CE23898289FEA6C006447AC /* NetworkConstants.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9CE2389A289FEC96006447AC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CE2389B289FECC1006447AC /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,6 +138,9 @@
 			dependencies = (
 			);
 			name = fitnessAppTest;
+			packageProductDependencies = (
+				9CE238A0289FF9E1006447AC /* Kingfisher */,
+			);
 			productName = fitnessAppTest;
 			productReference = 9CDBA0912885EF8000001A7E /* fitnessAppTest.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 9CDBA0882885EF8000001A7E;
+			packageReferences = (
+				9CE2389F289FF9E1006447AC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 9CDBA0922885EF8000001A7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -148,7 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE23899289FEA6C006447AC /* NetworkConstants.swift in Sources */,
+				9CE23894289FE202006447AC /* NetworkService.swift in Sources */,
+				9CE238A3289FFD67006447AC /* WorkoutImage.swift in Sources */,
+				9CE2389C289FECC1006447AC /* DetailViewModel.swift in Sources */,
 				9CDBA0972885EF8000001A7E /* ContentView.swift in Sources */,
+				9CE2389E289FEDC7006447AC /* WorkoutDetail.swift in Sources */,
+				9C5254E228987FDD007BC90B /* DetailView.swift in Sources */,
 				9CDBA0A62885F03400001A7E /* WorkoutProgram.swift in Sources */,
 				9CDBA0952885EF8000001A7E /* fitnessAppTestApp.swift in Sources */,
 			);
@@ -351,6 +407,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CE2389F289FF9E1006447AC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CE238A0289FF9E1006447AC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CE2389F289FF9E1006447AC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CDBA0892885EF8000001A7E /* Project object */;
 }
