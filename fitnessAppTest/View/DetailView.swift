@@ -11,6 +11,7 @@ import Kingfisher
 struct DetailView: View {
     @StateObject var viewModel = DetailViewModel()
     let id: String
+    @State var backgroundColor: Color = Color.mint
     
     private var selectedExerciseDescription: String {
         viewModel.workoutDetails.first(where: { $0.id == viewModel.selectedExerciseId })?.description ?? "Açıklama bulunamadı"
@@ -18,11 +19,13 @@ struct DetailView: View {
     
     var body: some View {
         ZStack {
+            backgroundColor
+                .ignoresSafeArea(.all)
             if viewModel.isLoading {
                 ProgressView()
             }
             ScrollView(.vertical) {
-                VStack(spacing: 0) {
+                VStack(alignment: .leading, spacing: 0) {
                     ForEach(viewModel.workoutDetails, id: \.id) { workout in
                         makeExerciseRow(title: workout.name, selectedId: workout.id)
                             .padding()
@@ -61,8 +64,13 @@ struct DetailView: View {
         } label: {
             HStack(spacing: 0) {
                 Text(title)
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.white)
+                    .multilineTextAlignment(.leading)
                 Spacer()
                 Image(systemName: "arrow.right")
+                    .padding(.trailing)
             }
         }
         .disabled(viewModel.isLoading)

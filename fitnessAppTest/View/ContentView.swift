@@ -11,13 +11,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                fullbodyCardAndWeather.padding(10)
+                mainFullbodyCard.padding(.horizontal, 100)
                 splitWorkouts
                 Spacer()
             }
             .background(
                 LinearGradient(
-                    colors: [.black.opacity(0.5), .gray],
+                    colors: [.mint.opacity(0.8), .blue],
                     startPoint: .top,
                     endPoint: .bottom
                 )
@@ -29,7 +29,7 @@ struct ContentView: View {
     }
     
     // MARK: - Views
-    var fullbodyCardAndWeather: some View {
+    var mainFullbodyCard: some View {
         HStack {
             NavigationLink {
                 DetailView(id: "4")
@@ -38,17 +38,9 @@ struct ContentView: View {
             }
 
             Spacer()
-            weatherLabel
         }
     }
     
-    var weatherLabel: some View {
-        Text("Weather")
-            .font(.largeTitle)
-            .fontWeight(.bold)
-            .foregroundColor(.black)
-            .padding()
-    }
     
     var fullbodyCard: some View {
         ZStack {
@@ -81,7 +73,7 @@ struct ContentView: View {
                 .fontWeight(.bold)
                 .padding()
             
-            ScrollView(.horizontal, showsIndicators: true) {
+            ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(WorkoutProgram.programs) { program in
                         NavigationLink {
